@@ -1,0 +1,68 @@
+#navbar {
+  display: flex;          /* Places children in one line */
+  align-items: center;    /*Vertically centers items */
+  /* justify-content: space-between; Spaces out elements */
+  padding: 0.5px 2px;  
+  background-color: #f8f8f8;
+}
+
+#cart{
+  margin-left: auto;
+}
+
+.search-box input{
+  font-size: 15px;
+  margin-left: 10px;
+  height: 28px;
+  width: 350px;
+  border-radius: 20px 0px 0px 20px;
+
+}
+
+.search-box button{
+  height: 33px;
+  border-radius: 0px 20px 20px 0px;
+  cursor: pointer;
+}
+
+
+.banner-section{
+  height: 400px;
+  width: 100vw;
+  background-color: red;
+  position: relative;
+  /* position: absolute; */
+  overflow: hidden;
+  margin: auto;
+  border: 2px solid #ddd;
+  
+}
+
+.slides-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease; /* 👈 smooth sliding */
+}
+
+
+.slide{
+  object-fit: cover;
+  /* margin-top: 50px; */
+  height: 100%;
+  width: 100vw;
+  /* position: relative; */
+  /* position: absolute; */
+  transition: 1s;
+  flex-shrink: 0;
+
+}
+
+.controls {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
