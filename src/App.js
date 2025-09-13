@@ -1,5 +1,7 @@
 import './App.css';
 import { Banner } from "./slider";
+import { FeaturedItems } from './FeaturedItems';
+
 
 
 
@@ -21,13 +23,11 @@ function App() {
 
 
       {/* Second Section */}
+      
         
       <Banner />         
-
-      <div>
-    
-        <h1>React</h1>
-      </div>
+      <FeaturedItems />
+      
 
     </div>
 
