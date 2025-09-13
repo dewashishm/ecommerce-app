@@ -1,6 +1,6 @@
 import './App.css';
 import { Banner } from "./slider";
-import { FeaturedItems } from './FeaturedItems';
+import { FeaturedItems } from './FeaturedItems'
 
 
 
