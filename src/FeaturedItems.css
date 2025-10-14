@@ -1,0 +1,20 @@
+.main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.block-level{
+    height: 30vh;
+    width: 95vw;
+    background-color: red;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    border-radius: 20px;
+}
+
+h1{
+    margin-left: 10px;
+}
