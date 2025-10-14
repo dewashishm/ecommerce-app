@@ -1,15 +1,18 @@
 import "./FeaturedItems.css";
 import { useState } from "react";
-
+import thirdimg1 from "./images/third-img1.jpeg"
+import thirdimg2 from "./images/third-img2.jpg"
+import thirdimg3 from "./images/third-img3.jpeg"
+import thirdimg4 from "./images/third-img4.jpg"
 
 export function FeaturedItems() {
 
   const items = [
 
-    {id:1, name: "Item 1", img:""},
-    {id:2, name: "Item 2", img:""},
-    {id:3, name: "Item 3", img:""},
-    {id:4, name: "Item 4", img:""},
+    {id:1, name: "Item 1", img:thirdimg1},
+    {id:2, name: "Item 2", img:thirdimg2},
+    {id:3, name: "Item 3", img:thirdimg3},
+    {id:4, name: "Item 4", img:thirdimg4},
     {id:5, name: "Item 5", img:""},
     {id:6, name: "Item 6", img:""},
     {id:7, name: "Item 7", img:""},
@@ -30,18 +33,23 @@ export function FeaturedItems() {
     
     return(
 
-      <section>
+      <section className="item-slider-section">
       <button className="slider-btn left" onClick={goPrev}>◀</button>
-      <div className="main-div">
-        <div className="block-level">
-              {/* Third section Featured Items */ }
-        
-              <h1>Top Deals</h1>
-              <div></div>
+      <div className="items-container">
+        <div className="items-row" style={{ transform: `translateX(-${counter * 25}%)` }}>
+    
+                {items.map((item) => (
+                    <div className="item-card" key={item.id}>
+                    <img src={item.img} alt={item.name} />
+                    <p>{item.name}</p>
+                    </div>
+                ))}
+              
         </div>
       </div>
-      <button className="slider-btn right" onClick={goNext}>▶</button>
 
+      <button className="slider-btn right" onClick={goNext}>▶</button>
+      </section>
 
     );
 }
