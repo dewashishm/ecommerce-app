@@ -23,7 +23,7 @@
 .item-slider-section {
   position: relative;
   width: 100%;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: auto;
   display: flex;
   align-items: center;
@@ -40,14 +40,14 @@
 }
 
 .item-card {
-  min-width: 25%;  /* 👈 4 items per row (100/4 = 25%) */
+  min-width: 20%;  /* 👈 4 items per row (100/4 = 25%) */
   box-sizing: border-box;
   padding: 10px;
   text-align: center;
 }
 
 .item-card img {
-  width: 100%;
+  width: 80%;
   border-radius: 10px;
 }
 
