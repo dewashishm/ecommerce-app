@@ -1,0 +1,19 @@
+.herobanner{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.sectionBanner{
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    }
+
+
+
+.rough{
+    
+    text-align: center;
+}
