@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+
+.footer-container{
+    display: flex;
+    font-family: "Inter", sans-serif;
+    /* justify-content: space-between; */
+    height: 250px;
+    background-color: rgb(194, 192, 192);
+}
+
+.footer-logo{
+    margin-top: 70px;
+    position: absolute;
+    left: 10%;
+    /* transform: translateX(-50%); */
+
+    /* margin-left: 15px; */
+}
+
+.footer-page-section{
+    display: flex;
+    margin-top: 70px;
+    /* margin-left: 50%; */
+    justify-content: center;
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%);
+    gap: 25px;
+}
+
+.footer-social-section{
+    display: flex; 
+    margin-top: 70px;
+    position: absolute;
+    left: 80%;
+    transform: translateX(-30%);
+    gap: 25px;
+    /* margin-left: 15%; */
+    /* justify-content: flex-end; */
+    
+}
+
+.footer-divider{
+    width: 90%;
+    height: 1px;
+    background-color: rgb(176, 168, 168);
+    display: flex;
+    border: none;
+    margin: 195px auto;
+ } 
+ 
+ 
+.footer-bottom{
+    display: flex;
+    position: absolute;
+    margin: 205px auto;
+    left: 10%;
+    gap: 30px;
+
+}
