@@ -35,14 +35,19 @@
     width: 20px;
     height: 20px;
     padding-left: 10px;
+    cursor: pointer;
 }
 
 .cart {
+    width: 20px;
+    height: 20px;
     /* padding-left: 10px; */
 
 }
 
 .login{
+    width: 20px;
+    height: 20px;
     padding-right: 20px;
 }
 

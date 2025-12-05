@@ -11,7 +11,7 @@ export function Header() {
     <div>
       <header id="navbar">
         <div className="menu-container">
-        <img src={burgerbar} alt="" srcset="" className="menu"/>  
+        <img src={burgerbar} onClick={() => setIsOpen(true)} alt="" srcset="" className="menu"/>  
         <p>Amazon</p>
 
         </div>
