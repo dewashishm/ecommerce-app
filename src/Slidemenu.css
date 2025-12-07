@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar{
+    width:350px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    height:100vh;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-logo{
+    margin: 80px 40px;
+}
+
+.sidebar-elements{
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    margin: 20px 40px;
+
+}
