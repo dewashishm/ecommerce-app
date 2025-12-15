@@ -1,8 +1,9 @@
 import "./Header.css";
-import search from "./images/searches.png"
-import burgerbar from "./images/burger-bar.png"
-import cart from "./images/shopping-cart.png"
-import loginicon from "./images/person.png"
+import search from "../../images/searches.png"
+// import burgerbar from "./images/burger-bar.png"
+import cart from "../../images/shopping-cart.png"
+import loginicon from "../../images/person.png"
+import { Slidemenu } from "../Navigation Menu/Slidemenu";
 
 
 export function Header() {
@@ -10,8 +11,8 @@ export function Header() {
 
     <div>
       <header id="navbar">
+        <Slidemenu />
         <div className="menu-container">
-        <img src={burgerbar} onClick={() => setIsOpen(true)} alt="" srcset="" className="menu"/>  
         <p>Amazon</p>
 
         </div>

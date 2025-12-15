@@ -1,4 +1,4 @@
-import section4Img from "./images/section4.jpg"
+import section4Img from "../../images/section4.jpg"
 import "./HeroBanner.css"
 
 export function HeroBanner() {

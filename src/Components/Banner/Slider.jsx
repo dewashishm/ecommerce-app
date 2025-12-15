@@ -1,8 +1,8 @@
-import slideImg1 from "./images/img1.jpg";
-import slideImg2 from "./images/img2.jpg";
-import slideImg3 from "./images/img3.jpg";
-import slideImg4 from "./images/img4.jpg";
-import "./App.css";
+import slideImg1 from '../../images/img1.jpg';
+import slideImg2 from "../../images/img2.jpg";
+import slideImg3 from "../../images/img3.jpg";
+import slideImg4 from "../../images/img4.jpg";
+import "./Slider.css";
 import { useState } from "react";
 
 export function Banner() {

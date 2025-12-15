@@ -1,7 +1,7 @@
 import "./Slidemenu.css";
 import { useState } from "react";
-import burgerbar from "./images/burger-bar.png";
-import close from "./images/close.png";
+import burgerbar from "../../images/burger-bar.png";
+import close from "../../images/close.png";
 
 
 

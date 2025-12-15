@@ -1,10 +1,10 @@
 import "./FeaturedItems.css";
 import { useState } from "react";
-import thirdimg1 from "./images/third-img1.jpeg"
-import thirdimg2 from "./images/third-img2.jpg"
-import thirdimg3 from "./images/third-img3.jpeg"
-import thirdimg4 from "./images/third-img4.jpg"
-import thirdimg5 from "./images/third-img4.jpg"
+import thirdimg1 from "../../images/third-img1.jpeg"
+import thirdimg2 from "../../images/third-img2.jpg"
+import thirdimg3 from "../../images/third-img3.jpeg"
+import thirdimg4 from "../../images/third-img4.jpg"
+import thirdimg5 from "../../images/third-img4.jpg"
 
 
 export function FeaturedItems() {
