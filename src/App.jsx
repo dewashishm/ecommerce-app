@@ -1,20 +1,26 @@
-// import './App.css';
-// import { Banner } from "./Slider";
-// import { FeaturedItems } from './FeaturedItems';
-// import { HeroBanner } from './HeroBanner'
-// import { Footer } from './Footer';
-// import { Header } from './Header';
-import {Home} from './Pages/Home/Home'
+import { Routes, Route } from 'react-router-dom';
 
+import './App.css';
+import { Footer } from './Components/Footer/Footer';
+import { Header } from './Components/Header/Header';
+import { Home } from './Pages/Home/Home'
+import { Products } from './Pages/Products/Products.jsx';
 
 function App() {
   return (
-    <div className="App">
-      
-      <Home />
+    <>
+      <Header />
+
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/products' element={<Products />} />
+
+      </Routes>
+
+      <Footer />
 
 
-    </div>
+    </>
 
   );
 }
