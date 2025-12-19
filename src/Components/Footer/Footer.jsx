@@ -1,4 +1,5 @@
 import "./Footer.css"
+import { Link } from "react-router-dom"
 
 
 export function Footer() {
@@ -11,9 +12,10 @@ export function Footer() {
             </div>
 
             <div className="footer-page-section">
-                <p>About</p>
-                <p>Products</p>
-                <p>Contacts</p>
+                
+                <Link to="/About" >About</Link>
+                <Link to="/Products" >Products</Link>
+                <Link to="/Contact" >Contact</Link>
             </div>
 
             <div className="footer-social-section">
