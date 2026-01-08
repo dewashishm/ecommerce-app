@@ -3,8 +3,6 @@ import { useState } from "react";
 import burgerbar from "../../images/burger-bar.png";
 import close from "../../images/close.png";
 import { Link } from 'react-router-dom'
-import { Header } from "../Header/Header";
-
 
 
 export function Slidemenu() {
