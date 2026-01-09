@@ -7,11 +7,8 @@ export function Products() {
     return (
         <div className='product-page'>
             <FilterPanel />
-
-
             <ProductGrid />
 
-            
         </div>
     );
 }

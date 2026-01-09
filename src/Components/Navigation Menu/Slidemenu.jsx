@@ -5,7 +5,7 @@ import close from "../../images/close.png";
 import { Link } from 'react-router-dom'
 
 
-export function Slidemenu() {
+function Slidemenu() {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -32,4 +32,6 @@ export function Slidemenu() {
             
         </>
     )
-}
+};
+
+export default Slidemenu;
