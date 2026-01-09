@@ -1,0 +1,56 @@
+.login-page{
+    margin-top: 190px;
+    display:grid;
+    justify-content: center;
+}
+
+.main-title{
+    justify-items: center;
+}
+
+.username {
+    margin-top: 10%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.password{
+    margin-top: 10%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.field-label{
+    font-size: 20px;
+}
+
+.title{
+    font-size: 30px;
+}
+
+
+.input-box {
+    margin-top: 15px;
+    height: 50px;
+    width: 600px;
+    font-size: 15px;
+    align-items: center;
+    padding: 0 20px 0 20px ;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.login-btn{
+    margin-top: 10%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #484747;
+    height: 50px;
+    width: 640px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
