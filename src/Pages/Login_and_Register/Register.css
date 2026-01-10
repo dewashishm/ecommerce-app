@@ -1,0 +1,58 @@
+.main-div{
+    display: grid;
+    margin: 100px 0 100px 0;
+    justify-content: center;
+}
+
+.register-header{
+    margin-top: 10%;
+    font-size: 40px; 
+}
+
+.register-header , .register-subheader{
+    display: grid;
+    justify-content: center;
+}
+
+.register-field-label{
+    margin-top: 5%;
+    font-size: 20px;
+}
+
+.register-input-box{
+    margin-top: 12px;
+    height: 50px;
+    width: 700px;
+    font-size: 15px;
+    align-items: center;
+    padding: 0 20px 0 20px ;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.second-div{
+    display: grid;
+
+}
+
+.btn-signup{
+    margin-top: 7%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #484747;
+    height: 50px;
+    width: 740px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.footer-label{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.register-footer{
+    margin-top: 5px;
+}
+
