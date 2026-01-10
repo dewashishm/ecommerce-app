@@ -4,7 +4,9 @@ import  Footer  from './Components/Footer/Footer';
 import  Header from './Components/Header/Header';
 import  Home  from './Pages/Home/Home'
 import { Products } from './Pages/Products/Products.jsx';
-import Login from './Pages/Login/Login.jsx';
+import Login from './Pages/Login_and_Register/Login.jsx';
+import Register from './Pages/Login_and_Register/Register.jsx';
+
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
         <Route path='/login' element={<Login />} />
-
+        <Route path='/login/register' element={<Register />} />
       </Routes>
 
       <Footer />
