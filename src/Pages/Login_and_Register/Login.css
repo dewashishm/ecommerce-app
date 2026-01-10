@@ -1,11 +1,19 @@
+
 .login-page{
-    margin-top: 190px;
+    margin: 180px 0 110px 0;
     display:grid;
     justify-content: center;
 }
 
 .main-title{
-    justify-items: center;
+justify-items: center;
+
+}
+
+.login-header{
+    font-size: 30px;
+    padding-bottom: 15px;
+   
 }
 
 .username {
@@ -16,25 +24,22 @@
 }
 
 .password{
-    margin-top: 10%;
+    margin-top: 5%;
     width: 100%;
     display: grid;
     justify-content: center;
 }
 
-.field-label{
+.login-field-label{
     font-size: 20px;
 }
 
-.title{
-    font-size: 30px;
-}
 
 
-.input-box {
+.login-input-box {
     margin-top: 15px;
     height: 50px;
-    width: 600px;
+    width: 700px;
     font-size: 15px;
     align-items: center;
     padding: 0 20px 0 20px ;
@@ -44,13 +49,25 @@
 
 
 .login-btn{
-    margin-top: 10%;
+    margin-top: 7%;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #484747;
     height: 50px;
-    width: 640px;
+    width: 740px;
     font-size: 20px;
     cursor: pointer;
 }
 
+.login-footer{
+    margin: 15px 0 0 0;
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.register-btn{
+    text-decoration: underline;
+    cursor: pointer;
+    
+}
