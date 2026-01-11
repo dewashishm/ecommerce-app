@@ -1,0 +1,45 @@
+
+
+.terms-header{
+    margin: 58px 0 0 0;
+    padding: 100px 0 100px 0;
+    display: grid;
+    justify-content: center;
+    font-size: 50px;
+    background-color: rgb(105, 104, 104);
+}
+
+.terms-middlepart{
+    background-color: rgb(90, 89, 89);
+    display: grid;
+    justify-content: left;
+    padding: 0 0 8% 0;
+}
+
+.license-header{
+    /* display: grid;
+    justify-content: left; */
+    margin: 5% 20% 0 20%;
+    font-size: 40px;
+}
+
+.main-heading{
+    /* display: grid;
+    justify-content: left; */
+    margin: 5% 20% 0 20%;
+    font-size: 35px;
+}
+
+.secondary-heading{
+    /* display: grid;
+    justify-content: left; */
+    font-size: 30px;
+    margin: 1.5% 20% 0 20%;
+}
+
+.terms-para{
+    display: grid;
+    justify-content: left;
+    margin: 1% 20% 0 20%;
+    text-align: justify;
+}
