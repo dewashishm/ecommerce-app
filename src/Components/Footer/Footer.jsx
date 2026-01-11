@@ -29,7 +29,9 @@ function Footer() {
 
             <div className="footer-bottom">
                 <p>Privacy & Policy</p>
+                <Link to='/login/register/terms-and-conditions'>
                 <p>Terms of Service</p>
+                </Link>
             </div>
         </div>
     )

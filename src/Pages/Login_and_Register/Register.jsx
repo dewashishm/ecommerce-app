@@ -1,4 +1,5 @@
 import './Register.css'
+import { Link } from 'react-router-dom';
 
 function Register() {
     return (
@@ -20,12 +21,17 @@ function Register() {
 
                 <p>
                     <span>I have read and agree to the</span>{' '} 
+                    <Link to='/login/register/terms-and-conditions'>
                     <span className='footer-label'>Terms & Conditions</span>
+                    </Link>
                 </p>
 
                 <p>
                     <span>Have an account?</span>{' '}
+
+                    <Link to='/login'>
                     <span className='footer-label'>Login</span>
+                    </Link>
 
                 </p>
 </div>
