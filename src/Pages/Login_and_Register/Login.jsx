@@ -32,8 +32,8 @@ function Login() {
 
             <div className='login-footer'>
                 <p>Don't have an account?</p>
-                <Link to='/login/register'>
-                <p className='register-btn'>Register</p>
+                <Link to='/login/register' className='register-btn'>
+                <p>Register</p>
                 </Link>
             </div>
 

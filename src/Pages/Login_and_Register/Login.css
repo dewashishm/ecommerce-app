@@ -66,8 +66,12 @@ justify-items: center;
     font-size: 15px;
 }
 
-.register-btn{
+ .register-btn{
     text-decoration: underline;
     cursor: pointer;
-    
+    transition: filter 0.3s ease;
+    color: rgb(77, 77, 77);
 }
+.register-btn:hover{
+    filter: brightness(1.3);
+} 

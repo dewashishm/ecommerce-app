@@ -21,16 +21,16 @@ function Register() {
 
                 <p>
                     <span>I have read and agree to the</span>{' '} 
-                    <Link to='/login/register/terms-and-conditions'>
-                    <span className='footer-label'>Terms & Conditions</span>
+                    <Link to='/login/register/terms-and-conditions' className='footer-label'>
+                    <span>Terms & Conditions</span>
                     </Link>
                 </p>
 
                 <p>
                     <span>Have an account?</span>{' '}
 
-                    <Link to='/login'>
-                    <span className='footer-label'>Login</span>
+                    <Link to='/login' className='footer-label'>
+                    <span>Login</span>
                     </Link>
 
                 </p>
