@@ -8,15 +8,14 @@ const router = express.Router();
 
 router.post('/signup', signup);
 router.post('/login', login);
-// router.post('/logout', logout)
-// router.get('/user', authMiddleware, async(req, res)=> {
-//     const user = await User.findById(req.user.userId).select('-password');
+router.post('/logout', logout)
+router.get('/user', authMiddleware, async(req, res)=> {
+    const user = await User.findById(req.user.userId).select('-password');
 
-//     res.status(200).json({
-//         message: "User Authenticated",
-//         user
-//     });
-// });
-
+    res.status(200).json({
+        message: "User Authenticated",
+        user
+    });
+});
 
 module.exports = router;
