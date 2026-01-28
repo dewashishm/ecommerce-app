@@ -1,7 +1,22 @@
 import './Register.css'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { signupUser } from '../../api/auth';
 
 function Register() {
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    
+    const handleSignup = async (e) => {
+        e.preventDefault();
+        console.log(name,email,password);
+        
+        const data = await signupUser(name,email,password);
+        console.log(data);
+        
+    }
     return (
         <div className='main-div'>
             <p className='register-header'>Create an account</p>
@@ -9,13 +24,13 @@ function Register() {
 
             <div className='second-div'>
                 <p className='register-field-label'>Name</p>
-                <input type="text" placeholder='Enter your Name' className='register-input-box'/>
+                <input type="text" placeholder='Enter your Name' id='namex'  className='register-input-box' onChange={(e) => setName(e.target.value)}/>
                 <p className='register-field-label'>Email Address</p>
-                <input type="text" placeholder='Enter your Email' name="" id="" className='register-input-box'/>
+                <input type="text" placeholder='Enter your Email' name="" id="emailx" className='register-input-box' onChange={(e) => setEmail(e.target.value)}/>
                 <p className='register-field-label'>Password</p>
-                <input type="text" name=""  placeholder='********' className='register-input-box'/>
+                <input type="text" name="" id='passwordx' placeholder='********' className='register-input-box' onChange={(e) => setPassword(e.target.value)}/>
 
-                <button className='btn-signup'>Sign Up</button>
+                <button className='btn-signup' id='xx' onClick={handleSignup}>Sign Up</button>
 
 <div className='register-footer'>
 
