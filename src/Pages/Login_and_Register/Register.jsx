@@ -1,22 +1,44 @@
 import './Register.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { signupUser } from '../../api/auth';
+
+
 
 function Register() {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [namefield, setNamefield] = useState("");
+    const [emailfield, setEmailfield] = useState("");
+    const [passwordfield, setPasswordfield] = useState("");
+
     
+    const navigate = useNavigate();
     const handleSignup = async (e) => {
         e.preventDefault();
-        console.log(name,email,password);
         
+        if (!name) {
+            setNamefield("Enter a name");
+            return;  
+        } 
+        else if (!email) {
+            setEmailfield('Enter valid Email Address')
+            return;
+        }
+        else {
+            setPasswordfield('Enter a valid password')
+            return;
+        }
+
         const data = await signupUser(name,email,password);
-        console.log(data);
         
-    }
+        if (data.message){
+            navigate("/login");
+        }  
+    };
+
     return (
         <div className='main-div'>
             <p className='register-header'>Create an account</p>
@@ -24,13 +46,21 @@ function Register() {
 
             <div className='second-div'>
                 <p className='register-field-label'>Name</p>
-                <input type="text" placeholder='Enter your Name' id='namex'  className='register-input-box' onChange={(e) => setName(e.target.value)}/>
-                <p className='register-field-label'>Email Address</p>
-                <input type="text" placeholder='Enter your Email' name="" id="emailx" className='register-input-box' onChange={(e) => setEmail(e.target.value)}/>
-                <p className='register-field-label'>Password</p>
-                <input type="text" name="" id='passwordx' placeholder='********' className='register-input-box' onChange={(e) => setPassword(e.target.value)}/>
+                <input type="text" placeholder='Enter your Name'  className='register-input-box' onChange={(e) => setName(e.target.value)}/>
+                {namefield && <p style={{ color: "red" }}>{namefield}</p>}
 
-                <button className='btn-signup' id='xx' onClick={handleSignup}>Sign Up</button>
+
+                <p className='register-field-label'>Email Address</p>
+                <input type="text" placeholder='Enter your Email' name="" className='register-input-box' onChange={(e) => setEmail(e.target.value)}/>
+                {emailfield && <p style={{ color: "red" }}>{emailfield}</p>}
+
+
+                <p className='register-field-label'>Password</p>
+                <input type="password" name="" placeholder='********' className='register-input-box' onChange={(e) => setPassword(e.target.value)}/>
+                {passwordfield && <p style={{ color: "red" }}>{passwordfield}</p>}
+
+
+                <button className='btn-signup' onClick={handleSignup}>Sign Up</button>
 
 <div className='register-footer'>
 
