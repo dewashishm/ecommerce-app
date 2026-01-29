@@ -26,7 +26,8 @@ function Login() {
             </div>
 
             <div className='btn-div'>
-                <button className='login-btn'>Log In</button>
+                <button 
+                className='login-btn' >Log In</button>
 
             </div>
 

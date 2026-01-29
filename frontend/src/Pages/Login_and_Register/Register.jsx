@@ -24,11 +24,11 @@ function Register() {
             return;  
         } 
         else if (!email) {
-            setEmailfield('Enter valid Email Address')
+            setEmailfield('Enter a valid email address');
             return;
         }
-        else {
-            setPasswordfield('Enter a valid password')
+        else if (password.length < 6){
+            setPasswordfield('Enter a valid password');
             return;
         }
 
@@ -46,18 +46,19 @@ function Register() {
 
             <div className='second-div'>
                 <p className='register-field-label'>Name</p>
-                <input type="text" placeholder='Enter your Name'  className='register-input-box' onChange={(e) => setName(e.target.value)}/>
+                <input type="text" placeholder='Enter your Name'  className='register-input-box' onChange={(e) => { setName(e.target.value); setNamefield('')}}/>
                 {namefield && <p style={{ color: "red" }}>{namefield}</p>}
 
 
                 <p className='register-field-label'>Email Address</p>
-                <input type="text" placeholder='Enter your Email' name="" className='register-input-box' onChange={(e) => setEmail(e.target.value)}/>
+
+                <input type="text" placeholder='Enter your Email' name="" className='register-input-box' onChange={(e) => { setEmail(e.target.value); setEmailfield('')}}/>
                 {emailfield && <p style={{ color: "red" }}>{emailfield}</p>}
 
 
                 <p className='register-field-label'>Password</p>
-                <input type="password" name="" placeholder='********' className='register-input-box' onChange={(e) => setPassword(e.target.value)}/>
-                {passwordfield && <p style={{ color: "red" }}>{passwordfield}</p>}
+                <input type="password" name="" placeholder='********' className='register-input-box' onChange={(e) => { setPassword(e.target.value); setPasswordfield('')}}/>
+                {passwordfield && <p style={{ color:  "red" }}>{passwordfield}</p>}
 
 
                 <button className='btn-signup' onClick={handleSignup}>Sign Up</button>
