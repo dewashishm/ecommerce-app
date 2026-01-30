@@ -16,6 +16,7 @@ function Register() {
 
     
     const navigate = useNavigate();
+    
     const handleSignup = async (e) => {
         e.preventDefault();
         
@@ -31,7 +32,7 @@ function Register() {
             setPasswordfield('Enter a valid password');
             return;
         }
-
+        
         const data = await signupUser(name,email,password);
         
         if (data.message){
