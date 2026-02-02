@@ -1,3 +1,36 @@
 .profile{
-    height: 55px;
+    padding-top: 55px;
+    display: grid;
+    justify-items: center;
+    background-color: rgb(240, 240, 240);
+}
+
+.profile-items{
+    list-style-type: none;
+    font-size: 30px;
+    margin: 40px 0 0 80px;
+}
+
+.list-items {
+    font-size: 20px;
+    margin: 40px 0 40px 0;
+}
+
+.gender-btn{
+    height: 18px;
+    width: 18px;
+}
+
+.profile-2{
+    background-color: white;
+    margin: 50px 0 50px 0;
+    padding: 20px 0 20px 0;
+    width: 75%;
+    
+    border: 1px solid rgb(224, 224, 224);
+}
+
+.delete-btn{
+    margin-top: 150px;
+    margin-left:  80px;
 }
