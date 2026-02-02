@@ -26,8 +26,13 @@ function Login() {
             
             return;
         }
+
         
         const data = await loginUser(email, password);
+
+        // console.log("login response", data);
+        
+        localStorage.setItem("user", JSON.stringify(data.user));
         
         if(data.message) {
             navigate("/");

@@ -1,8 +1,8 @@
-export async function signupUser(name,email,password) {
+export async function signupUser(name, email, password) {
   try {
     const response = await fetch("http://localhost:3000/api/auth/signup", {
       method: "POST",
-      headers: {"Content-Type": "application/json"},
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         name: name,
         email: email,
@@ -12,7 +12,7 @@ export async function signupUser(name,email,password) {
 
     const data = await response.json();
 
-    if (!response.ok){
+    if (!response.ok) {
       throw new Error(data.message || "signup failed")
     }
     console.log(data);
@@ -24,24 +24,31 @@ export async function signupUser(name,email,password) {
   }
 };
 
-export async function loginUser(email,password){
-  try{
-      const response = await fetch("http://localhost:3000/api/auth/login",{
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({
-          email, password
-        })
-      });
+export async function loginUser(email, password) {
+  try {
+    const response = await fetch("http://localhost:3000/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email, password
+      })
+    });
 
-      const data = await response.json();
-      // console.log(data);
-      return data;
+    const data = await response.json();
 
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("user", JSON.stringify(data.user));
+    console.log(data);
 
-    } catch (error) {
-      console.log("Login error:", error);
-      throw error;
-      
+    if (!response.ok) {
+      throw new Error(data.message || "Login failed");
     }
+    return data;
+
+
+  } catch (error) {
+    console.log("Login error:", error);
+    throw error;
+
+  }
 }
