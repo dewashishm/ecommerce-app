@@ -13,9 +13,9 @@ function Footer() {
 
             <div className="footer-page-section">
                 
-                <Link to="/About" >About</Link>
-                <Link to="/Products" >Products</Link>
-                <Link to="/Contact" >Contact</Link>
+                <Link to="/about" >About</Link>
+                <Link to="/products" >Products</Link>
+                <Link to="/contact" >Contact</Link>
             </div>
 
             <div className="footer-social-section">
