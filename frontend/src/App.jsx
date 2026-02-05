@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Pages/Home/Home'
 import Header from './Components/Header/Header';
-
 import Footer from './Components/Footer/Footer';
 import { Products } from './Pages/Products/Products.jsx';
 import Login from './Pages/Login_and_Register/Login.jsx';
@@ -11,6 +10,8 @@ import Register from './Pages/Login_and_Register/Register.jsx';
 import Terms from './Pages/Terms_and_Conditions/Terms.jsx';
 
 function App() {
+
+  
   return (
     <>
       <Header />
