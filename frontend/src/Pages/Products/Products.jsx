@@ -2,7 +2,7 @@ import './Products.css'
 import FilterPanel from '../../Components/Filter Panel/FilterPanel';
 import ProductGrid from '../../Components/Product Grid/ProductGrid';
 
-export function Products() {
+function Products() {
 
     return (
         <div className='product-page'>
@@ -12,3 +12,5 @@ export function Products() {
         </div>
     );
 }
+
+export default Products;

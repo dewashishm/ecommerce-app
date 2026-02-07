@@ -1,0 +1,9 @@
+.filter-panel {
+  width: 20%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid white;
+  background-color: white;
+}

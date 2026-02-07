@@ -1,0 +1,16 @@
+.products-grid{
+ display:grid;
+ grid-template-columns: repeat(3,2fr);   
+ gap: 50px; 
+}
+.product-link{
+  text-decoration: none;
+  color: black;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+
+}
