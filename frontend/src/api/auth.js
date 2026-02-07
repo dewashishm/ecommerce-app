@@ -33,11 +33,12 @@ export async function loginUser(email, password) {
         email, password
       })
     });
-
+    
     const data = await response.json();
 
     localStorage.setItem("token", data.token);
     localStorage.setItem("user", JSON.stringify(data.user));
+    window.location.reload();
     console.log(data);
 
     if (!response.ok) {

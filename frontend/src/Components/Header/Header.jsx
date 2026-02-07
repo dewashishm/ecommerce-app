@@ -12,16 +12,16 @@ function Header() {
 
   const[user, setUser] = useState(null);
   const [open, setOpen] = useState(false);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
     const storedUser = localStorage.getItem("user");
+    navigate("/");
 
     if (token && storedUser) {
       try{
         setUser(JSON.parse(storedUser));
-
 
       } catch (err) {
         console.error("Invalid user data in local storage");
@@ -37,7 +37,7 @@ function Header() {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     setUser(null);
-    navigate("/login");
+    navigate("/profile");
   };
 
 
@@ -62,14 +62,15 @@ function Header() {
           {!user ? (
             <Link to='/login' className='login-button'>
               <img src={loginicon} alt="" className="login" /> <p>Login</p>
-            </Link>) : (
+            </Link>) : 
+            (
               <div className="header-rightsection">
               <span onMouseEnter={() => {setOpen(!open)}} onMouseLeave={() => {setOpen(open)}}>
               <img src={loginicon} alt="" className="login" />
                 {user?.name} 
               </span>
 
-              {open && (
+              {!open && (
                 <div className="dropdown">
                   <Link to="/profile" onClick={() => setOpen(false)}>Profile</Link>
                   <Link to="/settings" onClick={() => setOpen(false)}>Settings</Link>
