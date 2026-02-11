@@ -15,6 +15,7 @@ function ProductCard() {
         console.log(data);
 
         setProducts(data.products);
+        
       }
       catch (err) {
         console.error(err);

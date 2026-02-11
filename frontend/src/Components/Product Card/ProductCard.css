@@ -3,14 +3,16 @@
  grid-template-columns: repeat(3,2fr);   
  gap: 50px; 
 }
+
 .product-link{
   text-decoration: none;
   color: black;
 }
 
 .product-card {
-  border: 1px solid #ddd;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
 
 }
