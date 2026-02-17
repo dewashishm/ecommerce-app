@@ -1,0 +1,21 @@
+.product-container{
+    width: 90%;
+    margin: 40px auto;
+    margin-top: 55px;
+    min-height: 50vh;
+    /* display:flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+}
+
+.cart-heading{
+    margin: 0 0 50px 0;
+
+}
+
+.price-details{
+    /* justify-items: right; */
+    text-align: right;
+    /* align-items:center; */
+}
