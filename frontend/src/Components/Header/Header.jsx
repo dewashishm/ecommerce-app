@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import "./Header.css";
-import search from "../../images/searches.png"
-// import burgerbar from "./images/burger-bar.png"
+import search_icon from "../../images/search-icon.png"
+import website_logo from "../../images/website-logo.png"
 import cart from "../../images/shopping-cart.png"
 import loginicon from "../../images/person.png"
 import Slidemenu from "../Navigation Menu/Slidemenu";
@@ -47,14 +47,16 @@ function Header() {
       <header id="navbar">
         <Slidemenu />
         <div className="menu-container">
-          <p>Amazon</p>
+        <Link to="/">
+          <img src={website_logo} className='header-website-logo'/>
+        </Link>
 
         </div>
 
         <div className='search-container'>
 
           <input type='text' placeholder="Search for Products..."></input>
-          <img src={search} alt="" className="search-button" />
+          <img src={search_icon} alt="" className="search-button" />
 
         </div>
 
@@ -81,7 +83,9 @@ function Header() {
               )}
             </div>
           )}
+          <Link to="/cart">
           <img src={cart} alt="" className="cart" />
+          </Link>
 
         </div>
 
