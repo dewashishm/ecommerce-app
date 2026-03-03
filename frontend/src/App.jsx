@@ -9,10 +9,13 @@ import Profile from './Pages/Profile/Profile.jsx';
 import Register from './Pages/Login_and_Register/Register.jsx';
 import Terms from './Pages/Terms_and_Conditions/Terms.jsx';
 import ProductPage from './Pages/ProductPage/ProductPage.jsx';
+import CartPage from "./Pages/Cart/CartPage.jsx"
 
 function App() {
   return (
     <>
+    <div>
+
       <Header />
 
       <Routes>
@@ -24,12 +27,14 @@ function App() {
 
         <Route path="/profile" element={<Profile />} />
 
-        <Route path="/products/:productid" element={<ProductPage />} />
+        <Route path="/products/:_id" element={<ProductPage />} />
 
+        <Route path="/cart" element= {<CartPage />}/>
     
     </Routes>
       <Footer />
 
+    </div>
 
     </>
 

@@ -6,3 +6,9 @@
      font-weight: 600;
      font-style: normal;
 }
+
+html, body {
+     min-width: 900px;
+      
+     /* background-color: rgba(247, 81, 119); */
+}
