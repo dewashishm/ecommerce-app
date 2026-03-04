@@ -5,35 +5,47 @@ import { Link } from "react-router-dom"
 function Footer() {
 
     return (
-        <div className="footer-container">
+        <div>
 
-            <div className="footer-logo">
-                <p>Website Logo</p>
-            </div>
+            <div className="footer-main-container">
+                <hr />
 
-            <div className="footer-page-section">
-                
-                <Link to="/about" >About</Link>
-                <Link to="/products" >Products</Link>
-                <Link to="/contact" >Contact</Link>
-            </div>
+                <div className="footer-items">
+                    {/*Terma Section*/}
+                    <div className="footer-section">
+                        <span>Terms</span>
+                        <span> Privacy Policy</span>
+                    </div>
 
-            <div className="footer-social-section">
-                <p>Facebook</p>
-                <p>Twitter</p>
-                <p>Instagram</p>
+                    {/* Company Section*/}
 
-            </div>
+                    <div className="footer-section">
 
-            <hr className="footer-divider" />
+                    <h4 className="footer-title">Company</h4>
+                    <ul >
+                        <li>Home</li>
+                        <li>About Us</li>
+                        <li>Pricing</li>
+                        <li>Support Center</li>
 
-            <div className="footer-bottom">
-                <p>Privacy & Policy</p>
-                <Link to='/login/register/terms-and-conditions' className='btn-terms-condition'>
-                <p>Terms of Service</p>
-                </Link>
+                    </ul>
+                    </div>
+
+                    <div className="footer-section">
+
+                    <h4 className="footer-title">Social Media</h4>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>X (Twitter)</li>
+
+                    </ul>
+                    </div>
+                </div>
+                <hr />
             </div>
         </div>
+
     )
 }
 
