@@ -1,15 +1,15 @@
-const BASE_URL = "https://dummyjson.com";
+const BASE_URL = "http://localhost:3000/api";
 
-export async function getProducts(limit = 10, skip = 0) {
+export async function getProducts() {
   const res = await fetch(
-    `${BASE_URL}/products?limit=${limit}&skip=${skip}`
+    `${BASE_URL}/products`
   );
   if (!res.ok) throw new Error("Failed to fetch products");
   return res.json();
 }
 
-export async function getProductById(id) {
-  const res = await fetch(`${BASE_URL}/products/${id}`);
+export async function getProductById(_id) {
+  const res = await fetch(`${BASE_URL}/products/${_id}`);
   if (!res.ok) throw new Error("Failed to fetch product");
   return res.json();
 }
@@ -20,4 +20,15 @@ export async function searchProducts(query) {
   );
   if (!res.ok) throw new Error("Search failed");
   return res.json();
-}
+};
+
+export async function getProductByCategory (category) {
+
+  const res = await fetch(`${BASE_URL}/products/categories/${category}`
+
+  );
+  return res.json();
+};
+
+
+
