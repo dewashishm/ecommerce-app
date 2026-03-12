@@ -22,17 +22,16 @@ function CartPage() {
 
                                     <img src={item.thumbnail} alt="" srcset="" className="item-thumbnail" />
                                     <div>
-
-                                    <div className="item-details-row">
-                                        <h3>{item.title}</h3>
+                                        <div className="item-details-row">
+                                            <h3>{item.title}</h3>
                                         </div>
                                         <div className="item-details-row">
-                                        <p>Price: ${item.price}</p>
-                                            </div>
-                                            <div className="item-details-row">
-                                                
-                                        <p>Quantity: {item.quantity}</p>
-                                    </div>
+                                            <p>Price: ${item.price}</p>
+                                        </div>
+                                        <div className="item-details-row">
+
+                                            <p>Quantity: {item.quantity}</p>
+                                        </div>
                                     </div>
                                 </div>
 
