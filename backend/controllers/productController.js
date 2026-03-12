@@ -24,7 +24,7 @@ exports.createProduct = async (req,res) => {
             brand,
             title,
             price,
-            image: imagePath,
+            images: imagePath,
             description,
             categories,
             rating
@@ -35,5 +35,39 @@ exports.createProduct = async (req,res) => {
     
     } catch (error) {
         res.status(500).json({message: error.message});
+    }
+};
+
+exports.getProductById = async (req, res) => {
+    try {
+        const product = await Product.findById(req.params.id);
+
+        if(!product) {
+
+            return res.status(404).json({ message: "Product not found"});
+        }
+
+        res.json(product);
+
+    } catch(error) {
+        res.status(500).json({message: "error"});
+    }
+
+};
+
+
+exports.getProductByCategory = async (req, res) => {
+    try{
+        const category = req.params.category;
+
+        const products = await Product.find({
+  categories: new RegExp(`^${category}$`, "i")
+});
+
+        res.json(products);
+
+
+    } catch (error) {
+        res.status(500).json({message: "Server Error"});
     }
 };
