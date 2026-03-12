@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 
 const productSchema = new mongoose.Schema({
-    id: {
-        type: Number,
-        required:true
-    },
     brand: {
         type: String,
         required: true
@@ -17,7 +13,7 @@ const productSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    image: {
+    images: {
         type: [String],
         required:true
     },
