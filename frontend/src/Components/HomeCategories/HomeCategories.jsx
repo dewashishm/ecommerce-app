@@ -1,26 +1,34 @@
-import "./HomeCategories.css"
 import { Link } from "react-router-dom";
+import "./HomeCategories.css"
 
-function HomeCategories (){
+
+
+function HomeCategories ({filterProducts}){
+
     return(
         <div className="categories-main">
             <ul>
-                <Link to='products' className="category-option">
+                <Link to="/products?category=All" className="category-option">
                 <li>All Products</li>
                 </Link>
-                <Link to='Electronics' className="category-option">
+                
+                <Link to="/products?category=Electronics" className="category-option">
                 <li>Electronics</li>
                 </Link>
-                <Link to='Furniture' className="category-option">
+                
+                <Link to="/products?category=Furniture" className="category-option">
                 <li>Furniture</li>
                 </Link>
-                <Link to='Toys' className="category-option">
+                
+                <Link to="/products?category=Toys" className="category-option">
                 <li>Toys</li>
                 </Link>
-                <Link to='Luggage&Bags' className="category-option">
+                
+                <Link to="/products?category=luggage-bags" className="category-option">
                 <li>Luggage & Bags</li>
                 </Link>
             </ul>
+
         </div>
     )
 }
