@@ -1,14 +1,20 @@
 import "./CartPage.css"
 import { useCart } from "../../context/CartContext.jsx";
+import delete_icon from "../../images/delete.png"
 
 
 function CartPage() {
     const { cartItems, removeFromCart } = useCart();
-
+    const totalMRP = cartItems.reduce((total, item) => total + item.price, 0);
+    const deliveryCharge = cartItems.length > 0 ? 9 : 0;
+    const totalAmount = totalMRP + deliveryCharge;
 
     return (
-        <div className="cart-container0">
-            <div className="cart-container">
+
+        // Cart Items Section 
+
+        <div className="cart-page">
+            <div className="cart-layout">
 
                 <div className="product-container">
                     <h2 className="cart-heading">My Cart</h2>
@@ -20,13 +26,13 @@ function CartPage() {
                             <div key={item.id}>
                                 <div className="cart-item">
 
-                                    <img src={item.thumbnail} alt="" srcset="" className="item-thumbnail" />
+                                    <img src={`http://localhost:3000/${item.images[0]}`} alt="" srcset="" className="item-thumbnail" />
                                     <div>
                                         <div className="item-details-row">
                                             <h3>{item.title}</h3>
                                         </div>
                                         <div className="item-details-row">
-                                            <p>Price: ${item.price}</p>
+                                            <p>Price: ₹ {item.price}</p>
                                         </div>
                                         <div className="item-details-row">
 
@@ -35,35 +41,48 @@ function CartPage() {
                                     </div>
                                 </div>
 
-                                <button onClick={() => removeFromCart(item.id)} className="item-remove-button">REMOVE</button>
+                                <p className="delivery">Delivery in 2 days</p>
+                                <div className="item-remove-container">
+                                    <div className="remove-box">
+                                        <button
+                                            onClick={() => removeFromCart(item._id)}
+                                            className="item-remove-button"
+                                        >
+                                            <img src={delete_icon} alt="" className="delete_icon" />
+                                            Remove
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         ))
                     )}
                 </div>
+                
+                {/* Price Section */}
+
                 <div className="price-details">
-                    <h2 className="price-details-header">
-                        Price details
-                    </h2>
-                    {cartItems.map((item) => (
-                        <div key={item.id} className="price-row-container">
+                    <h2 className="price-details-header">Price details</h2>
 
-                            <div className="price-row">
-                                <span>MRP</span>
-                                <span>${item.price}</span>
-                            </div>
+                    <div className="price-row-container">
 
-                            <div className="price-row">
-                                <span>Delivery Charges</span>
-                                <span>+$5</span>
-                            </div>
-                            <hr />
-                            <div className="price-row">
-                                <span>Total Amount</span>
-                                <span>${`${item.price + 5}`}</span>
-                            </div>
-
+                        <div className="price-row">
+                            <span>MRP</span>
+                            <span>₹ {totalMRP}</span>
                         </div>
-                    ))}
+
+                        <div className="price-row">
+                            <span>Delivery Charges</span>
+                            <span>+₹ {deliveryCharge}</span>
+                        </div>
+
+                        <hr />
+
+                        <div className="price-row">
+                            <span>Total Amount</span>
+                            <span>₹ {totalAmount}</span>
+                        </div>
+
+                    </div>
                     <button className="payment-button">Make Payment</button>
                 </div>
             </div>

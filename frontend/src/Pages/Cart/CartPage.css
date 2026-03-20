@@ -1,18 +1,15 @@
 
-.cart-container0{
+.cart-page{
     background-color: #eff0f3;
-    margin-top: 55px;
     padding-bottom: 30px;
-    
 }
 
-.cart-container{
+.cart-layout{
     width: 80%;
     margin: 0 auto;
     display:grid;
     grid-template-columns: 2fr 1fr;
-    
-
+    align-items: start;
 }
 
 .product-container{
@@ -25,7 +22,6 @@
     padding: 20px;
     border-radius: 4px;
     font-size: 15px;
-
 }
 
 .price-details{
@@ -37,16 +33,13 @@
     border: 1px solid rgb(232, 231, 231);
     box-shadow: 0 0 1px rgba(62, 61, 61, 0.15);
     border-radius: 4px;
-    
-
 }
-
 
 .cart-heading{
     margin: 0 0 50px 0;
     font-size: 20px;
-
 }
+
 .cart-item{
 display: flex
 }
@@ -62,21 +55,44 @@ display: flex
     font-size: 15px;
 }
 
+.delivery{
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 40px;
+}
 
+.item-remove-container{
+    margin: 5px 0 20px 0;
+}
+
+.remove-box{
+    padding: 5px 0;
+    border-radius: 4px;
+}
+
+.delete_icon{
+    height: 20px;
+    width: 20px;
+}
 
 .item-remove-button{
-    padding: 60px 0 0 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    color: rgb(130, 129, 129);
     font-size: 18px;
     background-color: white;
     cursor: pointer;
-    border: none;
+    border: 1px solid #7b7a7a;
+    border-radius: 5px;
 }
 
 .item-remove-button:hover{
-    color: blue;
+    color: rgb(103, 102, 102);
+
 }
-
-
 
 .price-details{
     /* justify-items: right; */
