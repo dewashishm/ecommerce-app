@@ -1,6 +1,6 @@
 export async function signupUser(name, email, password) {
   try {
-    const response = await fetch("https://ecommerce-app-wqyd.onrender.com/api/auth/signup", {
+    const response = await fetch("http://localhost:3000/api/auth/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -26,7 +26,7 @@ export async function signupUser(name, email, password) {
 
 export async function loginUser(email, password) {
   try {
-    const response = await fetch("https://ecommerce-app-wqyd.onrender.com/api/auth/login", {
+    const response = await fetch("http://localhost:3000/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

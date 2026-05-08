@@ -19,18 +19,19 @@ function App() {
       <Header />
 
       <Routes>
+
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
         <Route path='/login' element={<Login />} />
         <Route path='/login/register' element={<Register />} />
         <Route path='/login/register/terms-and-conditions' element={<Terms />} />
 
-        <Route path="/profile" element={<Profile />} />
+        <Route path='/profile' element={<Profile />} />
 
-        <Route path="/products/:_id" element={<ProductPage />} />
+        <Route path='/products/:_id' element={<ProductPage />} />
 
-        <Route path="/cart" element= {<CartPage />}/>
-    
+        <Route path='/cart' element= {<CartPage />}/>
+  
     </Routes>
       <Footer />
 

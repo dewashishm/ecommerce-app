@@ -10,8 +10,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "https://ecommerce-app-wqyd.onrender.com",
-  credentials: true
+  origin: "http://localhost:5174"
 }));
 
 

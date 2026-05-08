@@ -1,10 +1,10 @@
-import cart from "../models/cartModel.js"
+const cart = require("../models/cartModel");
 
-export const addToCart = async (req, res) => {
+exports.addToCart = async (req, res) => {
     const {userId, productId} = req.body;
 
     try{
-        const existingItem = await Cart.findOne({userId, productId});
+        const existingItem = await cart.findOne({userId, productId});
 
         if (existingItem) {
             existingItem.quantity += 1;
@@ -22,7 +22,7 @@ export const addToCart = async (req, res) => {
 };
 
 
-export const getCartItems = async (req, res) => {
+exports.getCartItems = async (req, res) => {
   const { userId } = req.params;
 
   try {
@@ -34,7 +34,7 @@ export const getCartItems = async (req, res) => {
 };
 
 
-export const removeFromCart = async (req, res) => {
+exports.removeFromCart = async (req, res) => {
   const { userId, productId } = req.body;
 
   try {

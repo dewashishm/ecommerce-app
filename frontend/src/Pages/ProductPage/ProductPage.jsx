@@ -1,7 +1,8 @@
 import "./ProductPage.css"
 import { useEffect, useState } from "react";
 import { getProductById } from "../../api/productApi";
-import { useParams } from "react-router-dom";
+import { useParams} from "react-router-dom";
+import { useCart } from "../../context/CartContext.jsx";
 import visa from "../../images/visa.png";
 import mastercard from "../../images/mastercard.png";
 import ammericanexpress from "../../images/american-express.png";
@@ -13,49 +14,49 @@ import linkedin from "../../images/linkedin.png";
 import copy from "../../images/copy.png";
 
 
+
 function ProductPage() {
-
-    const { productid } = useParams();
+    
+    const {addToCart} = useCart();
+    const { _id } = useParams();
     const [product, setProduct] = useState(null);
-
 
     useEffect(() => {
         async function retriveProducts() {
             try {
-                const data_item = await getProductById(productid);
+                const data_item = await getProductById(_id);
 
                 setProduct(data_item);
-                console.log(data_item);
-
             }
             catch (err) {
                 console.error(err);
-
             }
         }
-        if (productid) {
+        if (_id) {
 
             retriveProducts();
         }
-    }, [productid]);
+    }, [_id]);
+
 
     if (!product) {
         return <div className="pp">Loading...</div>;
     }
 
+    
     return (
+        
         <div className="pp">
-
             <div className="ppp">
-                <div className="pppp">
-                    <img src={product.images} alt="" srcset="" className="product-image" />
+                <div>
+                    <img src={`http://localhost:3000/${product.images[0]}`} alt="" srcset="" className="product-image" />
                 </div>
                 <div className="ppppp">
                     <p id="product-brand" className="product-details">{product.brand}</p>
                     <p id="product-title" className="product-details">{product.title}</p>
                     <p id="product-price" className="product-details">₹ {product.price}</p>
                     <p id="product-rating" className="product-details">Rating⭐: {product.rating}</p>
-                    <button id="cart-btn" className="product-details">Add To Cart</button>
+                    <button id="cart-btn" onClick={() => addToCart(product)} className="product-details">Add To Cart</button>
                     <p className="product-details payment">Payment:
                         <img src={visa} alt="" srcset="" className="payment-icons" />
                         <img src={mastercard} alt="" srcset="" className="payment-icons" />
@@ -81,7 +82,6 @@ function ProductPage() {
                     </p>
                 </p>
             </div>
-
         </div>
     )
 }

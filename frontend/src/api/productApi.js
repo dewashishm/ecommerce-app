@@ -1,4 +1,4 @@
-const BASE_URL = "https://ecommerce-app-wqyd.onrender.com/api";
+const BASE_URL = "http://localhost:3000/api";
 
 export async function getProducts() {
   const res = await fetch(

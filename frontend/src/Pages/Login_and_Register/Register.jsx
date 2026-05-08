@@ -3,8 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { signupUser } from '../../api/auth';
 
-
-
 function Register() {
 
     const [name, setName] = useState("");
@@ -13,8 +11,6 @@ function Register() {
     const [namefield, setNamefield] = useState("");
     const [emailfield, setEmailfield] = useState("");
     const [passwordfield, setPasswordfield] = useState("");
-
-    
     const navigate = useNavigate();
     
     const handleSignup = async (e) => {
@@ -32,12 +28,20 @@ function Register() {
             setPasswordfield('Enter a valid password');
             return;
         }
-        
-        const data = await signupUser(name,email,password);
-        
-        if (data.message){
-            navigate("/login");
-        }  
+
+        try{
+            const data = await signupUser(name,email,password);
+            
+            if (data.message === 'User registered successfully'){
+                navigate("/login");
+            }  
+
+        }catch(err){
+             console.log("FULL ERROR:", err);
+             console.log("ERROR MESSAGE:", err.message);
+             setEmailfield("Email already exists");
+             console.log(emailfield);
+        }
     };
 
     return (
@@ -64,24 +68,24 @@ function Register() {
 
                 <button className='btn-signup' onClick={handleSignup}>Sign Up</button>
 
-<div className='register-footer'>
+                <div className='register-footer'>
 
-                <p>
-                    <span>I have read and agree to the</span>{' '} 
-                    <Link to='/login/register/terms-and-conditions' className='footer-label'>
-                    <span>Terms & Conditions</span>
-                    </Link>
-                </p>
+                    <p>
+                        <span>I have read and agree to the</span>{' '} 
+                        <Link to='/login/register/terms-and-conditions' className='footer-label'>
+                        <span>Terms & Conditions</span>
+                        </Link>
+                    </p>
 
-                <p>
-                    <span>Have an account?</span>{' '}
+                    <p>
+                        <span>Have an account?</span>{' '}
 
-                    <Link to='/login' className='footer-label'>
-                    <span>Login</span>
-                    </Link>
+                        <Link to='/login' className='footer-label'>
+                        <span>Login</span>
+                        </Link>
 
-                </p>
-</div>
+                    </p>
+                </div>
             </div>
         </div>
     );
