@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-const BASE_URL = "http://localhost:3000/api";
+const BASE_URL = "https://ecommerce-app-wqyd.onrender.com/api";
 
 export async function addToCart() {
     const res = await fetch(`${BASE_URL}/cart/add`, {
