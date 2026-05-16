@@ -1,4 +1,4 @@
-const BASE_URL = "https://your-backend.onrender.com/api";
+const BASE_URL = "https://ecommerce-app-1-roke.onrender.com/api";
 
 export async function getProducts() {
   const res = await fetch(
