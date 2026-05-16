@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000/api";
+const BASE_URL = "https://your-backend.onrender.com/api";
 
 export async function getProducts() {
   const res = await fetch(
