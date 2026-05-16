@@ -1,6 +1,8 @@
+const BASE_URL = "https://ecommerce-app-1-roke.onrender.com"
+
 export async function signupUser(name, email, password) {
   try {
-    const response = await fetch("http://localhost:3000/api/auth/signup", {
+    const response = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -26,7 +28,7 @@ export async function signupUser(name, email, password) {
 
 export async function loginUser(email, password) {
   try {
-    const response = await fetch("http://localhost:3000/api/auth/login", {
+    const response = await fetch(`${BASE_URL}/api/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
